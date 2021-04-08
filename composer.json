@@ -1,0 +1,20 @@
+{
+    "name": "masterdmx/laravel-lbc-architecture",
+    "description": "Helpers for custom architecture",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey Krening",
+            "email": "masterdmx3325@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MasterDmx\\LbcArchitecture\\": "src/"
+        }
+    },
+    "version": "1.0.0",
+    "minimum-stability": "stable",
+    "require": {}
+}
