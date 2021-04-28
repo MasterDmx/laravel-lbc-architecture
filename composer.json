@@ -1,6 +1,6 @@
 {
     "name": "masterdmx/laravel-lbc-architecture",
-    "description": "Сustom architecture by Laravel Beyond Crud",
+    "description": "Helpers for custom architecture",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -14,7 +14,7 @@
             "MasterDmx\\LbcArchitecture\\": "src/"
         }
     },
-    "version": "1.0.2",
-    "minimum-stability": "stable",
+    "version": "1.0.0",
+    "minimum-stability": "dev",
     "require": {}
 }
