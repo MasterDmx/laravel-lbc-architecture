@@ -56,7 +56,7 @@ $app->useAppPath(\'app/App\');';
         $composer['autoload']['psr-4']['Support\\'] = 'app/Support';
 
         // Перезаписываем composer.json
-        file_put_contents(base_path('composer.json'), json_encode($composer));
+        file_put_contents(base_path('composer.json'), json_encode($composer, , JSON_PRETTY_PRINT));
 
         $this->info('Done. Run composer dump-autoload');
     }
