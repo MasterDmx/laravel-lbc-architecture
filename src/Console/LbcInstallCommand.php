@@ -55,10 +55,16 @@ $app->useAppPath(\'app/App\');';
         $composer['autoload']['psr-4']['Domain\\']  = 'app/Domain';
         $composer['autoload']['psr-4']['Support\\'] = 'app/Support';
 
-        // Перезаписываем composer.json
-        file_put_contents(base_path('composer.json'), json_encode($composer, , JSON_PRETTY_PRINT));
+        // Декодируем массив обратно в JSON
+        $composerResult = json_encode($composer, JSON_PRETTY_PRINT);
 
-        $this->info('Done. Run composer dump-autoload');
+        // Убираем \/
+        $composerResult = str_replace('\/', '/', $composerResult);
+
+        // Перезаписываем composer.json
+        file_put_contents(base_path('composer.json'), $composerResult);
+
+        $this->info('Done. Please run command: composer dump-autoload');
     }
 
     /**
